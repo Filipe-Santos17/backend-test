@@ -1,0 +1,17 @@
+@URL=http://localhost:8080/
+
+# @name Payment
+POST {{URL}}pagamento HTTP/1.1
+content-type: application/json
+
+{ 
+    "produto": { 
+        "codigo": 123, 
+        "nome": "Nome do Produto", 
+        "valor": 10000
+    }, 
+    "condicaoPagamento": { 
+        "valorEntrada": 500,
+        "qtdeParcelas": 10 
+    } 
+}
